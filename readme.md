@@ -6,8 +6,6 @@
 
 ### Создаём схемы
 
-    create schema items;
-
     create schema liquibase;
 
 ### Запускаем

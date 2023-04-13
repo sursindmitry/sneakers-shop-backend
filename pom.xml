@@ -87,6 +87,25 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-core</artifactId>
+				<version>4.17.2</version>
+				<executions>
+					<execution>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>update</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<changeLogFile>db/changelog/liquibase-changelog-master.xml</changeLogFile>
+					<url>jdbc:postgresql://localhost:15432/sneakers-shop</url>
+					<username>root</username>
+					<password>root</password>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
