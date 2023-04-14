@@ -7,11 +7,11 @@
         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.5.xsd">
 
     <changeSet id="create_schema" author="SursinDV">
-        <sqlFile path="sql/script.sql"/>
+        <sqlFile path="sql/CreateSchema.sql"/>
     </changeSet>
 
     <changeSet id="create_items_table" author="SursinDV">
-        <createTable tableName="items" schemaName="items">
+        <createTable tableName="items" schemaName="items" remarks="Создание таблицы items">
             <column name="item_id" type="bigserial">
                 <constraints primaryKey="true"/>
             </column>
@@ -20,4 +20,68 @@
             <column name="price" type="int4"/>
         </createTable>
     </changeSet>
+
+    <changeSet id="insert_data_to_items" author="SursinDV">
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские кроссовки Diadora Winner SL" />
+            <column name="img" value="/img/sneakers/1.png" />
+            <column name="price" value="12999" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Nike Air Max 270" />
+            <column name="img" value="/img/sneakers/2.jpg" />
+            <column name="price" value="12999" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Nike Blazer Mid Suede" />
+            <column name="img" value="/img/sneakers/3.jpg" />
+            <column name="price" value="8499" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Кроссовки Puma X Aka Boku Future Rider" />
+            <column name="img" value="/img/sneakers/4.jpg" />
+            <column name="price" value="8999" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Under Armour Curry 8" />
+            <column name="img" value="/img/sneakers/5.jpg" />
+            <column name="price" value="15199" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Nike Kyrie 7" />
+            <column name="img" value="/img/sneakers/6.png" />
+            <column name="price" value="11299" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Jordan Air Jordan 11" />
+            <column name="img" value="/img/sneakers/7.png" />
+            <column name="price" value="10799" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Nike LeBron XVIII" />
+            <column name="img" value="/img/sneakers/8.jpg" />
+            <column name="price" value="16499" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Nike Lebron XVIII Low" />
+            <column name="img" value="/img/sneakers/9.jpg" />
+            <column name="price" value="13999" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Nike Blazer Mid Suede" />
+            <column name="img" value="/img/sneakers/10.jpg" />
+            <column name="price" value="8499" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Кроссовки Puma X Aka Boku Future Ride" />
+            <column name="img" value="/img/sneakers/11.jpg" />
+            <column name="price" value="8999" />
+        </insert>
+        <insert tableName="items" schemaName="items">
+            <column name="title" value="Мужские Кроссовки Nike LeBron XVIII" />
+            <column name="img" value="/img/sneakers/12.jpg" />
+            <column name="price" value="16499" />
+        </insert>
+    </changeSet>
+
 </databaseChangeLog>
